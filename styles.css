@@ -158,6 +158,45 @@ h2 {
 	gap: 1rem;
 }
 
+.contact-form {
+	display: flex;
+	flex-direction: column;
+	max-width: 32rem;
+	gap: 0.5rem;
+}
+
+.contact-form label {
+	font-weight: 700;
+}
+
+.contact-form input,
+.contact-form textarea {
+	padding: 0.65rem 0.75rem;
+	margin-bottom: 0.75rem;
+	border: 1px solid var(--line);
+	border-radius: 0.3rem;
+	background: var(--surface);
+	color: var(--ink);
+	font: inherit;
+}
+
+.contact-form button {
+	align-self: start;
+	padding: 0.7rem 1.75rem;
+	border: 1px solid var(--accent);
+	border-radius: 999px;
+	background: var(--accent);
+	color: #fff;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+.contact-form button:hover,
+.contact-form button:focus-visible {
+	border-color: var(--accent-dark);
+	background: var(--accent-dark);
+}
+
 .card {
 	padding: 1.5rem;
 	border: 1px solid var(--line);
