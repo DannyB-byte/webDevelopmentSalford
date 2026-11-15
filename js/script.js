@@ -162,6 +162,4 @@ contactForm.addEventListener("submit", (event) => {
   window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
 });
 
-// Keep the copyright year current.
-document.querySelector("#year").textContent = new Date().getFullYear();
 });
