@@ -1,5 +1,5 @@
 // AURELIA — interactive menu, mobile navigation and contact form
-
+document.addEventListener("DOMContentLoaded", function () {
 const menuData = {
   Starters: [
     { name: "Burrata e Pomodoro", description: "Creamy burrata, heritage tomatoes, basil oil and toasted sourdough.", price: 9.50 },
@@ -164,3 +164,4 @@ contactForm.addEventListener("submit", (event) => {
 
 // Keep the copyright year current.
 document.querySelector("#year").textContent = new Date().getFullYear();
+});
