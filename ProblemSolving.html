@@ -5,7 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Personal Branding Website">
 	<title>portfolio</title>
-	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/AureliaStyles.css">
+	<script src="js/script.js" defer></script>
 </head>
 <body>
 	<header class="site-header">
@@ -24,29 +26,195 @@
 	</header>
 
 	<main id="top">
-		<section class="hero" aria-labelledby="hero-title">
-			<div class="container hero-content">
-				<p class="eyebrow"></p>
-				<h1 id="hero-title"></h1>
-				<p class="hero-copy"></p></p>
-			</div>
-		</section>
+		 <a class="skip-link" href="#main">Skip to content</a>
 
-		<section class="content" id="services" aria-labelledby="services-title">
-			<div class="container">
-				<div class="section-heading">
-					<h2 id="services-title"></h2>
-					<p></p>
-				</div>
-			</div>
-		</section>
+  <header class="site-header" id="top">
+    <div class="header-inner container">
+      <a class="brand" href="#top" aria-label="Aurelia home">
+        <span class="brand-mark" aria-hidden="true">A</span>
+        <span class="brand-copy"><strong>AURELIA</strong><small>ITALIAN DINING</small></span>
+      </a>
 
-		<section class="content" id="about" aria-labelledby="about-title">
-			<div class="container">
-				<h2 id="about-title"></h2>
-				<p></p>
-			</div>
-		</section>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span>
+      </button>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+        <a href="#menu">Menu</a>
+        <a href="#story">Our story</a>
+        <a href="#visit">Visit us</a>
+        <a class="nav-contact" href="#contact">Contact <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="hero-image" role="img" aria-label="Elegant Italian restaurant dining table"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-content container">
+        <p class="eyebrow light-eyebrow"><span></span> A little taste of Italy</p>
+        <h1>Gather around.<br><em>Stay a little longer.</em></h1>
+        <p class="hero-intro">Seasonal ingredients, thoughtful cooking and the simple pleasure of sharing a beautiful meal.</p>
+        <div class="hero-actions">
+          <a class="button button-light" href="#menu">Explore our menu <span aria-hidden="true">↓</span></a>
+          <a class="text-link light-link" href="#story">Discover Aurelia <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="hero-note"><span>EST. 2018</span><span>ITALIAN FOOD · WARM HOSPITALITY</span></div>
+    </section>
+
+    <section class="intro-section section-pad">
+      <div class="container intro-grid">
+        <p class="eyebrow"><span></span> Benvenuti</p>
+        <div>
+          <h2>Good food. Good company.<br><em>That's the whole story.</em></h2>
+          <p class="intro-copy">At Aurelia, we believe the best moments happen around the table. Our kitchen brings a fresh perspective to Italian favourites, celebrating honest ingredients, handmade touches and recipes made to be shared.</p>
+        </div>
+        <div class="intro-stamp" aria-label="Made with care"><span>FATTO</span><strong>con</strong><span>AMORE</span></div>
+      </div>
+    </section>
+
+    <section class="menu-section section-pad" id="menu">
+      <div class="container">
+        <div class="section-heading centered">
+          <p class="eyebrow"><span></span> From our kitchen</p>
+          <h2>A menu worth <em>savouring.</em></h2>
+          <p>Italian inspiration, seasonal ingredients and a little something for every appetite.</p>
+        </div>
+
+        <div class="menu-tabs" role="tablist" aria-label="Menu categories">
+          <button class="menu-tab active" id="tab-starters" role="tab" aria-selected="true" aria-controls="menu-panel" tabindex="0" data-category="Starters">Starters</button>
+          <button class="menu-tab" id="tab-mains" role="tab" aria-selected="false" aria-controls="menu-panel" tabindex="-1" data-category="Mains">Mains</button>
+          <button class="menu-tab" id="tab-vegetarian" role="tab" aria-selected="false" aria-controls="menu-panel" tabindex="-1" data-category="Vegetarian">Vegetarian</button>
+          <button class="menu-tab" id="tab-desserts" role="tab" aria-selected="false" aria-controls="menu-panel" tabindex="-1" data-category="Desserts">Desserts</button>
+          <button class="menu-tab" id="tab-drinks" role="tab" aria-selected="false" aria-controls="menu-panel" tabindex="-1" data-category="Drinks">Drinks</button>
+        </div>
+
+        <div class="menu-panel" id="menu-panel" role="tabpanel" aria-labelledby="tab-starters" tabindex="0">
+          <div class="menu-panel-heading">
+            <div><p class="eyebrow">Aurelia favourites</p><h3 id="menu-category-title">To begin</h3></div>
+            <span class="menu-count" id="menu-count">03 dishes</span>
+          </div>
+          <div class="dish-grid" id="dish-grid" aria-live="polite"></div>
+        </div>
+        <p class="menu-disclaimer">Please let our team know about any allergies or dietary requirements. Menu items and prices are illustrative.</p>
+      </div>
+    </section>
+
+    <section class="feature-section">
+      <div class="feature-photo" role="img" aria-label="Fresh handmade pasta being prepared"></div>
+      <div class="feature-copy">
+        <p class="eyebrow light-eyebrow"><span></span> Made with intention</p>
+        <h2>Simple ingredients.<br><em>Beautifully considered.</em></h2>
+        <p>We take our time with the things that matter: fresh pasta, carefully sourced produce and flavours that let every ingredient shine. No fuss, just food made with care.</p>
+        <a class="text-link light-link" href="#story">A little more about us <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
+    <section class="story-section section-pad" id="story">
+      <div class="container story-grid">
+        <div class="story-copy">
+          <p class="eyebrow"><span></span> The Aurelia feeling</p>
+          <h2>A place to slow down<br>and <em>come together.</em></h2>
+          <p>Inspired by the warmth of Italian neighbourhood trattorias, Aurelia was imagined as a place where everyone has a seat at the table. From a relaxed midweek supper to a special celebration, our aim is to make every visit feel personal.</p>
+          <p>Our approach is modern, but our values are timeless: hospitality, generosity and a genuine love of good food.</p>
+          <a class="button button-dark" href="#contact">Say hello <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="story-image-wrap">
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1000&q=85" alt="Warmly lit restaurant table set for dinner" loading="lazy">
+          <span class="image-caption">A table is always waiting.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="visit-section section-pad" id="visit">
+      <div class="container">
+        <div class="section-heading centered">
+          <p class="eyebrow"><span></span> Find your way to us</p>
+          <h2>Your table is <em>waiting.</em></h2>
+          <p>Come for the food. Stay for the atmosphere.</p>
+        </div>
+        <div class="visit-grid">
+          <article class="visit-card">
+            <span class="visit-icon" aria-hidden="true">⌖</span>
+            <h3>Find us</h3>
+            <p>18 Piazza Lane<br>Manchester, M1 2AB</p>
+            <span class="small-note">Fictional address for this showcase</span>
+          </article>
+          <article class="visit-card">
+            <span class="visit-icon" aria-hidden="true">◷</span>
+            <h3>Opening hours</h3>
+            <p>Tuesday – Thursday <strong>12pm – 10pm</strong><br>Friday – Saturday <strong>12pm – 11pm</strong><br>Sunday <strong>12pm – 8pm</strong></p>
+            <span class="small-note">Closed Mondays</span>
+          </article>
+          <article class="visit-card">
+            <span class="visit-icon" aria-hidden="true">✳</span>
+            <h3>Get in touch</h3>
+            <p><a href="tel:+441610000000">0161 000 0000</a><br><a href="mailto:hello@aurelia.example">hello@aurelia.example</a></p>
+            <span class="small-note">We'd love to hear from you</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section section-pad" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-copy">
+          <p class="eyebrow light-eyebrow"><span></span> Get in touch</p>
+          <h2>Let's make<br><em>something special.</em></h2>
+          <p>Have a question, planning a celebration or simply want to say hello? Send us a message and we'll be happy to help.</p>
+          <div class="contact-detail"><span>EMAIL</span><a href="mailto:hello@aurelia.example">hello@aurelia.example</a></div>
+          <div class="contact-detail"><span>PHONE</span><a href="tel:+441610000000">0161 000 0000</a></div>
+        </div>
+
+        <form class="contact-form" id="contact-form">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="name">Your name <span>*</span></label>
+              <input id="name" name="name" type="text" autocomplete="name" placeholder="e.g. Alex Taylor" required>
+            </div>
+            <div class="form-field">
+              <label for="email">Email address <span>*</span></label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="enquiry">What can we help with? <span>*</span></label>
+            <select id="enquiry" name="enquiry" required>
+              <option value="">Choose an enquiry</option>
+              <option value="Table reservation">Table reservation</option>
+              <option value="Private event">Private event</option>
+              <option value="Dietary requirements">Dietary requirements</option>
+              <option value="General enquiry">General enquiry</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="message">Your message <span>*</span></label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us a little more..." required></textarea>
+          </div>
+          <button class="button button-light form-submit" type="submit">Prepare email <span aria-hidden="true">↗</span></button>
+          <p class="form-feedback" id="form-feedback" role="status" aria-live="polite">Your email application will open with your message ready to send.</p>
+          <p class="form-privacy">This demonstration uses your device's email application. Your message is not sent automatically.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <a class="brand footer-brand" href="#top">
+        <span class="brand-mark" aria-hidden="true">A</span>
+        <span class="brand-copy"><strong>AURELIA</strong><small>ITALIAN DINING</small></span>
+      </a>
+      <p>Modern Italian cooking.<br>Timeless hospitality.</p>
+      <a class="back-top" href="#top">Back to top ↑</a>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="year"></span> Aurelia Italian Dining</span>
+      <span>Fictional restaurant created for a web development showcase.</span>
+    </div>
+  </footer>
 	</main>
 
 	<footer class="site-footer" id="contact">
